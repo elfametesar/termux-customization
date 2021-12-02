@@ -23,7 +23,7 @@ PATHX="$""PREFIX/bin/root:$""PATH"
 SYMBOL="➜"
 PS1='$''(V="\$?" ;if [ $UID == 0 ]; then echo \[\e[1\;32m\]; else echo \[\e[1\;31m\]; fi)$SYMBOL \[\e[1;36m\]\W\[\e[m\] '
 
-echo "\e[37mInstalling wget and unzip\e[0m"
+echo -e "\e[37mInstalling wget and unzip\e[0m"
 pkg install wget unzip -y &> /dev/null
 
 bash_rc(){
