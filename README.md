@@ -9,6 +9,8 @@
 Binaries are also taken from it except su binary, which I modified Termux's stock one.**
 
 # Installation
+**Do not run it with Play Store version of termux**
+
 You can simply put setup.sh file in Termux home folder and give the appropriate permissions then run with ./setup.sh or
 ```
 pkg install wget -y
