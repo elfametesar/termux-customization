@@ -16,3 +16,4 @@ wget https://raw.githubusercontent.com/erenmete/termux-customization/main/setup.
 chmod +x setup.sh
 ./setup.sh
 ```
+**Do not run the script if you already ran it previously. You can however do it after doing termux-reset, which will erase your usr folder**
