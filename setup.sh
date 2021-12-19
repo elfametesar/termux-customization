@@ -29,7 +29,7 @@ bash_rc(){
     echo "PATH=$PATHX" >> $PREFIX/etc/bash.bashrc
     echo "SYMBOL='$SYMBOL'" >> $PREFIX/etc/bash.bashrc
     echo "PS1='$PS1'" >> $PREFIX/etc/bash.bashrc
-    echo "cd /sdcard" >> $PREFIX/etc/bash.bashrc
+    echo 'HOME=$PREFIX/../home' >> $PREFIX/etc/bash.bashrc
     echo "" > $PREFIX/etc/motd
 }
 
