@@ -20,8 +20,8 @@ ps1bk=$PS1
 
 [ ! -d "$PREFIX/bin/root" ] && mkdir $PREFIX/bin/root
 PATHX="$""PREFIX/bin/root:$""PATH"
-SYMBOL="➜"
-PS1='$''(V="\$?" ;if [ $UID == 0 ]; then echo \[\e[1\;32m\]; else echo \[\e[1\;31m\]; fi)$SYMBOL \[\e[1;36m\]$(pwd | xargs basename)\[\e[m\] '
+SYMBOL=`[ "$UID" == "0" ] && echo "#" || echo '➜'`
+PS1='$(V=$? ;if [ $V == 0 ]; then echo \[\e[1\;32m\]; else echo \[\e[1\;31m\]; fi)$SYMBOL \[\e[1;36m\]\W\[\e[m\] '
 echo -e "\e[37mInstalling wget and unzip\e[0m"
 pkg install wget unzip -y &> /dev/null
 
