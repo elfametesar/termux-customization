@@ -20,7 +20,7 @@ ps1bk=$PS1
 
 [ ! -d "$PREFIX/bin/root" ] && mkdir $PREFIX/bin/root
 PATHX="$""PREFIX/bin/root:$""PATH"
-SYMBOL="`[ "$UID" == "0" ] && echo "#" || echo '➜'`"
+SYMBOL="[ "$UID" == "0" ] && echo "#" || echo '➜'"
 PS1='$(V="\$?" ;if [ $V == 0 ]; then echo \[\e[1\;32m\]; else echo \[\e[1\;31m\]; fi)$SYMBOL \[\e[1;36m\]$(pwd | xargs basename)\[\e[m\] '
 echo -e "\e[37mInstalling unzip\e[0m"
 pkg install unzip -y &> /dev/null
