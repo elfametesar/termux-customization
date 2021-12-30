@@ -22,8 +22,8 @@ ps1bk=$PS1
 PATHX="$""PREFIX/bin/root:$""PATH"
 SYMBOL="`[ "$UID" == "0" ] && echo "#" || echo '➜'`"
 PS1='$(V="\$?" ;if [ $V == 0 ]; then echo \[\e[1\;32m\]; else echo \[\e[1\;31m\]; fi)$SYMBOL \[\e[1;36m\]$(pwd | xargs basename)\[\e[m\] '
-echo -e "\e[37mInstalling wget and unzip\e[0m"
-pkg install wget unzip -y &> /dev/null
+echo -e "\e[37mInstalling unzip\e[0m"
+pkg install unzip -y &> /dev/null
 
 bash_rc(){
     echo "PATH=$PATHX" >> $PREFIX/etc/bash.bashrc
